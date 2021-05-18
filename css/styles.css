@@ -1,6 +1,19 @@
 :root {
     --main-color: #dc1414;
     --orange: #feba00;
+    --container-max-width: 480px;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --container-max-width: 605px;
+    }
+}
+
+@media (min-width: 1440px) {
+    :root {
+        --container-max-width: 690px;
+    }
 }
 
 html, body {
@@ -16,8 +29,23 @@ body {
 }
 
 p {
+    font-family: 'Lato', sans-serif;
     font-size: 14px;
     line-height: 20px;
+}
+
+@media (min-width: 768px) {
+    p {
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
+
+@media (min-width: 1440px) {
+    p {
+        font-size: 24px;
+        line-height: 40px;
+    }
 }
 
 .text-orange {
@@ -27,7 +55,7 @@ p {
 .container {
     min-width: 290px;
     width: 100%;
-    max-width: 425px;
+    max-width: var(--container-max-width);
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -44,12 +72,13 @@ p {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    background-image: url("../images/main-bg.png");
+    background-image: url("../images/main-bg-sm.png");
+    background-repeat: no-repeat;
     background-size: cover;
     margin: auto;
     position: relative;
     width: 100%;
-    max-width: 425px;
+    max-width: 1440px;
 }
 
 .content__inner {
@@ -64,18 +93,37 @@ p {
 }
 
 .content h1 {
-    font-size: 21px;
+    font-size: 28px;
     font-weight: 700;
-    letter-spacing: -0.2px;
-    line-height: 27px;
-    margin-top: 70px;
-    margin-bottom: 7px;
+    letter-spacing: -0.4px;
+    line-height: 28px;
+    margin-top: 64px;
+    margin-bottom: 22px;
 }
 
 @media (min-width: 359px) {
     .content h1 {
-        font-size: 24px;
-        line-height: 30px;
+        font-size: 32px;
+        line-height: 32px;
+    }
+}
+
+@media (min-width: 768px) {
+    .content h1 {
+        font-size: 56px;
+        letter-spacing: -0.8px;
+        line-height: 64px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .content {
+        background-image: url("../images/main-bg.png");
+    }
+
+    .content h1 {
+        font-size: 64px;
+        line-height: 72px;
     }
 }
 
@@ -103,10 +151,17 @@ p {
     flex-shrink: 0;
     color: #d7dbda;
     letter-spacing: -0.1px;
-    font-size: 7px;
-    line-height: 10px;
-    margin: 10px 0;
-    text-align: center;
+    font-size: 8px;
+    line-height: normal;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        font-size: 14px;
+        letter-spacing: -0.17px;
+    }
 }
 
 .footer a {
