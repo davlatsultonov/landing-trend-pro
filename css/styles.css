@@ -1,5 +1,5 @@
 :root {
-    --main-color: #c41b1b;
+    --main-color: #dc1414;
     --orange: #feba00;
     --container-max-width: 480px;
 }
@@ -163,6 +163,7 @@ p {
         font-size: 56px;
         letter-spacing: -0.8px;
         line-height: 64px;
+        margin-bottom: 34px;
     }
 }
 
@@ -235,11 +236,20 @@ p {
 .app-call__book {
     color: var(--main-color);
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.2px;
-    border-bottom: 1px dashed var(--main-color);
     cursor: pointer;
     position: relative;
+}
+
+.app-call__book:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0;
+    border-bottom: 1px dashed #dc1414;
+    position: absolute;
+    bottom: 2px;
 }
 
 @media (min-width: 768px) {
@@ -504,6 +514,19 @@ p {
     color: var(--placeholder-color);
 }
 
+@media (min-width: 1440px) {
+    .modal-view__form .form__input-field {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+    }
+
+    .modal-view__form .btn {
+        min-width: 100%;
+        margin-top: 8px;
+    }
+}
+
 /* success block */
 
 .success-block {
@@ -581,17 +604,11 @@ p {
     z-index: 10;
     background-color: #fff;
     right: .5rem;
-    bottom: -.2rem;
+    bottom: -4px;
     padding: 3px;
     line-height: 8px;
     border-radius: 1px;
     border: 1px solid red;
-}
-
-@media (min-width: 1440px) {
-    .error_alert {
-        bottom: -.5rem
-    }
 }
 
 @keyframes radiance {
