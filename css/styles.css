@@ -122,13 +122,15 @@ p {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    background-image: url("../images/main-bg-sm.png");
+    background-image: url("../images/main-bg.png");
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     margin: auto;
     position: relative;
     width: 100%;
     max-width: 1440px;
+    background-color: #000000;
 }
 
 .content__inner {
@@ -168,10 +170,6 @@ p {
 }
 
 @media (min-width: 1440px) {
-    .content {
-        background-image: url("../images/main-bg.png");
-    }
-
     .content h1 {
         font-size: 64px;
         line-height: 72px;
@@ -189,6 +187,9 @@ p {
     padding-left: 16px;
     padding-right: 16px;
     border-bottom: 1px solid #e2e8f0;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
 }
 
 .header__left {
