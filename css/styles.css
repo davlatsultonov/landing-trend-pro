@@ -167,7 +167,20 @@ p {
 @media (min-width: 359px) {
     .content h1 {
         font-size: 32px;
-        line-height: 32px;
+        line-height: 36px;
+        margin-bottom: 31px;
+    }
+}
+
+@media (min-width: 414px) {
+    .content h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .content p {
+        font-size: 16px;
+        line-height: 22px;
     }
 }
 
@@ -493,10 +506,16 @@ p {
     flex-shrink: 0;
     color: #d7dbda;
     letter-spacing: -0.1px;
-    font-size: 8px;
+    font-size: 7px;
     line-height: normal;
     margin-top: 8px;
     margin-bottom: 8px;
+}
+
+@media (min-width: 414px) {
+    .footer {
+        font-size: 9px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -516,7 +535,13 @@ p {
     --placeholder-color: #ccc;
     font-family: 'Lato', sans-serif;
     width: 100%;
-    margin-top: 14px;
+    margin-top: 25px;
+}
+
+@media (min-width: 414px) {
+    .form {
+        margin-top: 35px;
+    }
 }
 
 @media (min-width: 768px) {
