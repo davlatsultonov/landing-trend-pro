@@ -238,11 +238,7 @@ p {
     justify-content: space-between;
     align-items: center;
     min-width: 319px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-bottom: 1px solid #e2e8f0;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 16px;
 }
 
 .header__left {
@@ -395,7 +391,6 @@ p {
     height: 41px;
     cursor: pointer;
     border: none;
-    background-color: #999;
     border-radius: 4px;
     margin: 7px;
     transition: background-color 250ms ease;
@@ -406,10 +401,12 @@ p {
 
 .form-tab-btn.whatsapp {
     background-image: url("../images/icons/wa.svg");
+    background-color: #00e676;
 }
 
 .form-tab-btn.telegram {
     background-image: url("../images/icons/tlg.svg");
+    background-color: #2AABEE;
 }
 
 .form-tab-btn.active {
@@ -536,21 +533,28 @@ p {
 .success-block {
     flex-grow: 1;
     color: #6b6b6b;
-    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     height: 100%;
 }
 
+.success-block.container {
+    max-width: 414px;
+}
+
+
+@media (min-width: 768px) {
+    .success-block.container {
+        max-width: 480px;
+    }
+}
+
 .success-block p {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
-    letter-spacing: 6px;
-    line-height: 16px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
+    line-height: 20px;
 }
 
 .success-block h1 {
@@ -558,20 +562,17 @@ p {
     font-weight: 700;
     letter-spacing: -0.8px;
     line-height: 35px;
+    margin-bottom: 20px;
 }
 
 .success-block .btn {
-    margin-top: 30px;
+    margin-top: 34px;
 }
 
 @media (min-width: 359px) {
     .success-block h1 {
         font-size: 32px;
         line-height: 40px;
-    }
-
-    .success-block .btn {
-        margin-top: 48px;
     }
 }
 
@@ -585,6 +586,12 @@ p {
         font-weight: 700;
         letter-spacing: -0.8px;
         line-height: 56px;
+    }
+
+
+
+    .success-block .btn {
+        margin-top: 48px;
     }
 }
 
