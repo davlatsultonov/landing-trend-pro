@@ -534,6 +534,7 @@ p {
 /* success block */
 
 .success-block {
+    flex-grow: 1;
     color: #6b6b6b;
     text-align: center;
     display: flex;
