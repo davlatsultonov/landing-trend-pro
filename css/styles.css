@@ -439,6 +439,7 @@ p {
 }
 
 .modal-view .container {
+    max-width: 414px;
     padding: 0;
 }
 
