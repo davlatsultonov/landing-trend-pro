@@ -1,7 +1,7 @@
 :root {
     --main-color: #dc1414;
     --orange: #feba00;
-    --container-max-width: 480px;
+    --container-max-width: 414px;
 }
 
 @media (min-width: 768px) {
@@ -51,7 +51,6 @@ p {
 .text-orange {
     color: var(--orange);
 }
-
 
 .btn {
     min-width: 224px;
@@ -116,6 +115,9 @@ p {
     display: flex;
     flex-direction: column;
     position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
 }
 
 .content {
@@ -176,6 +178,55 @@ p {
     }
 }
 
+/* app-call */
+.app-call {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    .app-call {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.app-call__book span {
+    color: var(--main-color);
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -0.1px;
+    cursor: pointer;
+    position: relative;
+    border-bottom: dotted 0.125rem var(--main-color);
+}
+
+@media (min-width: 768px) {
+    .app-call__book span {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+.app-call__book:hover {
+    opacity: .8;
+}
+
+.app-call__number {
+    font-size: 16px;
+    letter-spacing: -0.4px;
+    color: #6b6b6b;
+}
+
+@media (min-width: 768px) {
+    .app-call__number {
+        margin-right: 15px;
+    }
+}
+/* app-call */
+
 /* header */
 .header {
     flex-shrink: 0;
@@ -187,9 +238,6 @@ p {
     padding-left: 16px;
     padding-right: 16px;
     border-bottom: 1px solid #e2e8f0;
-    width: 100%;
-    max-width: 1440px;
-    margin: auto;
 }
 
 .header__left {
@@ -197,6 +245,10 @@ p {
     align-items: center;
 }
 
+.header__app-call {
+    margin-left: auto;
+    margin-right: 40px;
+}
 /* footer */
 
 .footer {
@@ -219,62 +271,6 @@ p {
 .footer a {
     color: inherit;
 }
-
-.app-call {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 12px;
-}
-
-@media (min-width: 768px) {
-    .app-call {
-        flex-direction: row;
-        align-items: center;
-    }
-}
-
-.app-call__book {
-    color: var(--main-color);
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: 0.2px;
-    cursor: pointer;
-    position: relative;
-}
-
-.app-call__book:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 0;
-    border-bottom: 1px dashed #dc1414;
-    position: absolute;
-    bottom: 2px;
-}
-
-@media (min-width: 768px) {
-    .app-call__book {
-        font-size: 16px;
-    }
-}
-
-.app-call__book:hover {
-    opacity: .8;
-}
-
-.app-call__number {
-    font-size: 16px;
-    letter-spacing: -0.4px;
-    color: #6b6b6b;
-}
-
-@media (min-width: 768px) {
-    .app-call__number {
-        margin-right: 10px;
-    }
-}
-
 /* form block */
 
 .form {
@@ -576,10 +572,6 @@ p {
         padding-left: 15px;
     }
 
-    .success-block.container {
-        max-width: 768px;
-    }
-
     .success-block h1 {
         font-size: 48px;
         font-weight: 700;
@@ -587,8 +579,6 @@ p {
         line-height: 56px;
     }
 }
-
-
 
 /* error block */
 .error_wrapper {
