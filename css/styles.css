@@ -379,6 +379,7 @@ p {
 
 .form__top {
     display: flex;
+    padding-left: 8px;
 }
 
 .form__input-field {

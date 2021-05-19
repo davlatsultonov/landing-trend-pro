@@ -5,7 +5,6 @@ $(function () {
         const buttonName = $(this).data('buttonName'),
               formInput = $(this).closest('.form').find('.form__bottom').find('.input');
 
-        formInput.css('border-top-left-radius', $(this).hasClass('whatsapp') ? 0 : 8);
         formTabBtns.removeClass('active');
         $(this).addClass('active');
         formInput.attr('name', buttonName);
