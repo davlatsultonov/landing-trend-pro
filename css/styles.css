@@ -58,6 +58,7 @@ p {
 }
 
 .btn {
+    font-family: 'Lato', sans-serif;
     min-width: 224px;
     display: inline-flex;
     align-items: center;
@@ -75,6 +76,12 @@ p {
     will-change: background-color;
     transition: background-color 300ms ease-in-out;
     cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .btn {
+        font-weight: 600;
+    }
 }
 
 .btn:hover {
@@ -122,6 +129,7 @@ p {
     position: relative;
     width: 100%;
     max-width: 1440px;
+    min-width: 320px;
     margin: auto;
 }
 
@@ -160,15 +168,15 @@ p {
     font-weight: 700;
     letter-spacing: -0.4px;
     line-height: 28px;
-    margin-top: 30px;
-    margin-bottom: 22px;
+    margin-top: 48px;
+    margin-bottom: 32px;
 }
 
 @media (min-width: 359px) {
     .content h1 {
         font-size: 32px;
         line-height: 36px;
-        margin-bottom: 31px;
+        margin-top: 64px;
     }
 }
 
@@ -189,7 +197,7 @@ p {
         font-size: 56px;
         letter-spacing: -0.8px;
         line-height: 64px;
-        margin-bottom: 34px;
+        margin-bottom: 54px;
     }
 }
 
@@ -209,6 +217,16 @@ p {
     z-index: 501;
 }
 
+.app-call__book {
+    display: none;
+}
+
+@media (min-width: 359px) {
+    .app-call__book {
+        display: block;
+    }
+}
+
 .app-call__book span {
     color: var(--main-color);
     font-size: 14px;
@@ -224,9 +242,28 @@ p {
 }
 
 .app-call__number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-size: 16px;
     letter-spacing: -0.4px;
     color: #6b6b6b;
+    line-height: 1;
+}
+
+.app-call__number-icon {
+    margin-right: .5rem;
+}
+
+@media (min-width: 359px) {
+    .app-call__number {
+        display: inline-block;
+        line-height: 1.5;
+    }
+
+    .app-call__number-icon {
+        display: none;
+    }
 }
 
 @media (min-width: 768px) {
@@ -252,7 +289,7 @@ p {
     margin-left: auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 359px) {
     .hamburger {
         margin-left: 0;
     }
@@ -327,13 +364,15 @@ p {
 /* header */
 .header {
     flex-shrink: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 319px;
-    padding: 1rem 16px;
     z-index: 500;
     overflow: hidden;
+}
+
+@media (min-width: 1440px) {
+    .header {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .header__items {
@@ -342,6 +381,11 @@ p {
     flex-wrap: wrap;
     position: relative;
     width: 100%;
+    padding: 1rem 16px .9375rem;
+}
+
+.header__items--bordered {
+    border-bottom: 1px solid #999;
 }
 
 .header__left {
@@ -350,15 +394,54 @@ p {
 }
 
 .header__app-call {
-    display: none;
+    order: 2;
+    width: 100%;
+    display: flex;
     margin-left: auto;
-    margin-right: 40px;
+    padding-top: .9375rem;
+    margin-top: 1rem;
+    position: relative;
 }
 
-@media (min-width: 768px) {
+.header__app-call:before {
+    content: '';
+    display: block;
+    width: 115%;
+    height: 1px;
+    background: #999;
+    position: absolute;
+    top: 0;
+    left: -16px;
+    right: 0;
+}
+
+@media (min-width: 359px) {
+    .header__items {
+        padding-bottom: 1rem;
+    }
+
+    .header__items--bordered {
+        border-bottom: none;
+    }
+
+
     .header__app-call {
-        display: flex;
+        order: 0;
+        width: auto;
         margin-left: auto;
+        margin-right: 20px;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .header__app-call:before {
+        display: none;
+    }
+}
+
+@media (min-width: 414px) {
+    .header__app-call {
+        margin-right: 40px;
     }
 }
 
@@ -536,6 +619,7 @@ p {
     font-family: 'Lato', sans-serif;
     width: 100%;
     margin-top: 25px;
+    margin-bottom: 42px;
 }
 
 @media (min-width: 414px) {
@@ -547,6 +631,12 @@ p {
 @media (min-width: 768px) {
     .form {
         margin-top: 60px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .form {
+        margin-bottom: 144px;
     }
 }
 
@@ -675,7 +765,7 @@ p {
     background-color: #fff;
     width: 56px;
     height: 55px;
-    border-radius: 4px 4px 0 0;
+    border-radius: 8px 8px 0 0;
     margin: 0;
     background-size: 36px;
 }
