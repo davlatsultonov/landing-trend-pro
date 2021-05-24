@@ -368,13 +368,6 @@ p {
     overflow: hidden;
 }
 
-@media (min-width: 1440px) {
-    .header {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
 .header__items {
     display: flex;
     align-items: center;
@@ -442,6 +435,14 @@ p {
 @media (min-width: 414px) {
     .header__app-call {
         margin-right: 40px;
+    }
+}
+
+
+@media (min-width: 1440px) {
+    .header__items {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -839,6 +840,7 @@ p {
 .modal-view__form {
     --placeholder-color: #6b6b6b;
     margin-top: 40px;
+    margin-bottom: 0;
 }
 
 .modal-view__form .input {
