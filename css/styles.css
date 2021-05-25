@@ -129,7 +129,6 @@ p {
     position: relative;
     width: 100%;
     max-width: 1440px;
-    min-width: 320px;
     margin: auto;
 }
 
