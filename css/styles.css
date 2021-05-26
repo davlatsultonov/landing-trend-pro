@@ -326,18 +326,6 @@ p {
     transition: all .3s;
 }
 
-.hamburger__icon span:nth-of-type(3) {
-    bottom: 0;
-    width: 80%;
-    transition: all .3s;
-}
-
-@media (min-width: 768px) {
-    .hamburger__icon:hover span:nth-of-type(2), .hamburger__icon:hover span:nth-of-type(3) {
-        width: 100%;
-    }
-}
-
 .hamburger__icon.open span {
     width: 100%;
 }
