@@ -332,8 +332,10 @@ p {
     transition: all .3s;
 }
 
-.hamburger__icon:hover span:nth-of-type(2), .hamburger__icon:hover span:nth-of-type(3) {
-    width: 100%;
+@media (min-width: 768px) {
+    .hamburger__icon:hover span:nth-of-type(2), .hamburger__icon:hover span:nth-of-type(3) {
+        width: 100%;
+    }
 }
 
 .hamburger__icon.open span {

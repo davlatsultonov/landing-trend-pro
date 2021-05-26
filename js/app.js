@@ -1,11 +1,8 @@
 $(function () {
-
-    console.log(123);
     $('.hamburger__icon').on('click', function () {
         $(this).toggleClass('open');
         $(this).closest('.header').toggleClass('open');
     });
-
 
 
     const formTabBtns = $('.form-tab-btn');
