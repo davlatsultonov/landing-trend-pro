@@ -326,6 +326,12 @@ p {
     transition: all .3s;
 }
 
+.hamburger__icon span:nth-of-type(3) {
+    bottom: 0;
+    width: 80%;
+    transition: all .3s;
+}
+
 .hamburger__icon.open span {
     width: 100%;
 }
@@ -532,8 +538,8 @@ p {
 
     .nav {
         width: calc(66.66667% - .625rem);
-        margin-left: calc(29% + .3125rem);
-        margin-right: calc(8.33333% + .3125rem);
+        margin-left: auto;
+        margin-right: 4rem;
         position: absolute;
         top: 0;
         align-items: center;
